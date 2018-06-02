@@ -1,24 +1,33 @@
 # blogVisitor
 
->`--data`
->> blog_20180525
->> blog_20180529
->> blog_20180530
->> blog_20180601
->> blog_20180602
+>----`--data`
 >
->`--pickle`
->> data.pickle
+>> --------blog_20180525
+>>
+>> --------blog_20180529
+>>
+>> --------blog_20180530
+>>
+>> --------blog_20180601
+>>
+>> --------blog_20180602
 >
->> flagVies.pickle
+>----`--pickle`
+>> --------data.pickle
+>>
+>> --------flagVies.pickle
+>>
+>> --------vistors.pickle
 >
->> vistors.pickle
+>----`--result`
 >
->`--result`
->`.gitignore`
->`drawPic.py`
->`getHtml.py`
->`README.md`
+>----`.gitignore`
+>
+>----`drawPic.py`
+>
+>----`getHtml.py`
+>
+>----`README.md`
 
 
 
@@ -49,4 +58,17 @@
 > 当前折线图横坐标为时间，开始日期为2018年12月17日，结束日期为当前时间.
 >
 > 折线图按照每100天进行分颜色绘制，后续考虑更多数据统计信息的添加.
+
+## pickle
+
+> 共计3个文件，保存上次的pickle数据，分为date, visitors, flagViews数据
+
+## result 
+
+> 保存绘制图像: `Diff_time.jpg`, `FlagViews_time.jpg`, `Visitors_time.jpg`
+
+## data
+
+> 保存所有获取的数据，会有重复数据，最新的日期所包含的数据最多.
+
 
