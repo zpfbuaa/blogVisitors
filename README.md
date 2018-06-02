@@ -1,4 +1,27 @@
-# blogVisitors
+# blogVisitor
+
+>`--data`
+>> blog_20180525
+>> blog_20180529
+>> blog_20180530
+>> blog_20180601
+>> blog_20180602
+>
+>`--pickle`
+>> data.pickle
+>
+>> flagVies.pickle
+>
+>> vistors.pickle
+>
+>`--result`
+>`.gitignore`
+>`drawPic.py`
+>`getHtml.py`
+>`README.md`
+
+
+
 
 ## getHtml.py
 
