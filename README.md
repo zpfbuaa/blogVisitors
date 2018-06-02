@@ -1,5 +1,6 @@
-# blogVisitor by 伊甸一点
+# blogVisitor 
 
+by [伊甸一点][!http://www.cnblogs.com/zpfbuaa/]
 
 >----`data`
 >
