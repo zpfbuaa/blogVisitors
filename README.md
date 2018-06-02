@@ -1,6 +1,7 @@
-# blogVisitor
+# blogVisitor by 伊甸一点
 
->----`--data`
+
+>----`data`
 >
 >> --------blog_20180525
 >>
@@ -12,14 +13,14 @@
 >>
 >> --------blog_20180602
 >
->----`--pickle`
+>----`pickle`
 >> --------data.pickle
 >>
 >> --------flagVies.pickle
 >>
 >> --------vistors.pickle
 >
->----`--result`
+>----`result`
 >
 >----`.gitignore`
 >
