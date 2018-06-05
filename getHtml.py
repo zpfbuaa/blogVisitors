@@ -34,6 +34,7 @@ def getTotalBlog(url, pages):
         visitors.extend(item_visitors)
         flagViews.extend(item_flagViews)
 
+
     return date, visitors, flagViews
 
 def printData(date, visitors, flagViews):
@@ -58,7 +59,7 @@ def writeToFile(date, visitors, flagViews, data_root='data/'):
 
 
 url = 'http://s04.flagcounter.com/more7/XTPq/'
-pages = 18
+pages = 19
 date, visitors, flagViews = getTotalBlog(url, pages)
 
 # printData(date, visitors, flagViews)
