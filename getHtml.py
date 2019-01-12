@@ -13,7 +13,7 @@ import os
 
 date_pt = re.compile('<font face=arial size=-1>(\w+ \d+, \d+)')
 visitors_pt = re.compile('<font face=arial size=2>(\w+)</td><td>')
-flagViews_pt = re.compile('<font face=arial size=2>(\w+)</font></td></tr>')
+flagViews_pt = re.compile('<font face=arial size=2>(\S+)</font></td></tr>')
 
 def getTotalBlog(url, pages):
 
@@ -37,6 +37,26 @@ def getTotalBlog(url, pages):
 
     return date, visitors, flagViews
 
+def change_data(date, visitors, flagViews):
+    print(len(visitors))
+    print(len(flagViews))
+    for i in range(0, len(date)):
+        str_visitor = str(visitors[i])
+        str_flagViews = str(flagViews[i])
+        if (str_visitor.find(',') != -1):
+            v_split = str_visitor.split(',')
+            visitors[i] = int(v_split[0]) * 1000 + int(v_split[1])
+        else:
+            visitors[i] = int(str_visitor)
+
+        if (str_flagViews.find(',') != -1):
+            f_split = str_flagViews.split(',')
+            flagViews[i] = int(f_split[0]) * 1000 + int(f_split[1])
+        else:
+            flagViews[i] = int(str_flagViews)
+
+    return date, visitors, flagViews
+
 def printData(date, visitors, flagViews):
     print('Date    Visitors    Flag Counter Views')
     for i in range(0, len(date)):
@@ -52,15 +72,19 @@ def writeToFile(date, visitors, flagViews, data_root='data/'):
     f.write(header)
 
     for i in range(0, len(date)):
-        line = date[i]+'\t'+visitors[i]+'\t'+flagViews[i]+'\n'
+        line = date[i]+'\t'+str(visitors[i])+'\t'+str(flagViews[i])+'\n'
         f.write(line)
     f.close()
     return 1
 
 
 url = 'http://s04.flagcounter.com/more7/XTPq/'
-pages = 19
+pages = 23
 date, visitors, flagViews = getTotalBlog(url, pages)
+
+# printData(date, visitors, flagViews)
+
+date, visitors, flagViews = change_data(date, visitors, flagViews)
 
 # printData(date, visitors, flagViews)
 
